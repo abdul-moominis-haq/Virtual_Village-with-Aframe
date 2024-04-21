@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insect World</title>
+    <script src="/aframeOne.js"></script>
+    <script src="/aframe.min.js"></script>
+    <script src="./script/aframe.js"></script>
+    <script src="/ada-water.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- Assets section -->
+        <a-assets>
+            <a-asset-item id="house1" src="/Models/house-pro1/scene.gltf"></a-asset-item>
+            <a-asset-item id="light" src="/Models/double_guy_arm_light_pole_1/scene.gltf"></a-asset-item>
+            <a-asset-item id="tree1" src="/Models/maple_tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="tree2" src="/Models/tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="tree3 " src="/Models/stylized_tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="pole" src="/Models/pripyat_light_poles/scene.gltf"></a-asset-item>
+          
+            <a-asset-iteem id="house2" src="/Models/modern_villa_design__architecture/scene.gltf"></a-asset-iteem> 
+        </a-assets>
+
+
+        <!-- Insect models section -->
+        <a-entity 
+        gltf-model="#house1" 
+        position="-15 -2.5 8 "
+        >
+        </a-entity>
+        <a-entity
+         gltf-model="#tree2"
+         sposition="15 0 10"
+        >
+    </a-entity>
+        <a-entity 
+         gltf-model="#tree1"
+         position="140 0 -220 ">
+
+        </a-entity>
+         <a-entity 
+         gltf-model="#tree1"
+         position="-140 0 -220 ">
+
+         </a-entity> 
+            <a-entity 
+         gltf-model="#tree1"
+         position="140 -20 50 ">
+
+        </a-entity>
+         <a-entity 
+         gltf-model="#tree1"
+         position="-140 -20 50 ">
+
+         </a-entity> 
+
+                <a-entity 
+         gltf-model="#tree1"
+         position="340 -10 -100 ">
+
+        </a-entity>
+         <a-entity 
+         gltf-model="#tree1"
+         position="-340 -10 -100 ">
+
+         </a-entity> 
+
+        <a-entity 
+         gltf-model="#tree2" 
+         position="0 0 100 " 
+         scale=" 3 5 5 "
+         >
+       </a-entity>
+       <a-entity  
+         gltf-model="#pole"
+         position=" -27 0 10"
+        >
+        </a-entity> 
+        <a-entity 
+         gltf-model="#light" 
+         position=" -150 -230 10" 
+        >
+        </a-entity> 
+         <a-entity 
+         gltf-model="#light" 
+         position=" -150 -250 70" 
+        >
+        </a-entity> 
+        <a-entity 
+         gltf-model="#house2" 
+         position="0 -2.5  0 ">
+        </a-entity>
+         <a-entity 
+         gltf-model="#li"
+          position="0 10 0">
+        </a-entity>
+         <a-entity 
+         gltf-model="#tree">
+        </a-entity>
+         <!-- The light of environment -->
+         
+          <a-light type="ambient" intensity="0.3"></a-light>
+            <a-light type="point" intensity="0.3" target="#house1" ></a-light>
+            <a-entity light="type:point; intensity:0.5 "  position="0 5 0"></a-entity>            <a-entity light="type:spot; intensity:0.5; penumbra:0.67 "  position="0 5 0"></a-entity>
+         
+
+         
+          
+       
+
+         <!-- Creation of wall entity -->
+         <a-entity>
+              <a-box 
+         src="./Models/th (2).jpg" 
+         repeat="10 10"
+       
+         height="10"
+         width="100"
+         position="80 0 -70">
+        </a-box>
+       
+        <a-box 
+        src="./Models/th (2).jpg" 
+         repeat="10 10" 
+        
+        height="10"
+        width="100"
+         position="-80 0 -70">
+        </a-box>
+        <a-box 
+        src="./Models/th (2).jpg" 
+         repeat="10 10"  
+        
+        height="10"
+        width="100"
+         position="80 0 70">
+        </a-box>
+       
+        <a-box 
+           src="./Models/th (2).jpg" 
+         repeat="10 10"
+        height="10"
+        width="100"
+         position="-80 0 70">
+        </a-box>
+        <a-box 
+           src="./Models/th (2).jpg" 
+         repeat="10 10"
+        height="10"
+        width="140"
+         position="-130 0 0"z
+         rotation="0 90 0"
+         >
+        </a-box>
+        <a-box 
+          src="./Models/th (2).jpg" 
+         repeat="10 10"
+         
+        height="10"
+        width="140"
+         position="130 0 0"
+         rotation="0 90 0"
+         >
+        </a-box>
+               
+         </a-entity>
+
+<!-- creation of road entity -->
+
+         <a-entity>
+        <a-box
+         src="./Models/th (2).jpg" 
+         repeat="10 10"
+        color="purple"
+        width="2"
+        length="100"
+        depth="0"
+        position="4 0 -20"
+        rotation="90 0 0 "
+       
+        >
+            
+        </a-box>
+        
+        <a-box
+         src="./Models/th (2).jpg" 
+         repeat="10 10"
+        color="purple"
+        width="2"
+        length="100"
+        rotation="90 0 0"
+        depth="0"
+        position="4 0 80"
+       
+        >
+            
+        </a-box>
+     
+    
+        <!-- Camera and controls section -->
+        <a-entity camera position="0 0 0" look-controls wasd-controls></a-entity> 
+
+        <!-- Environment section -->
+        <a-sky color="#ECECEC" src="/Models/sky4.jpg"></a-sky>  
+        <a-plane
+         static-body src="/Models/th (1).jpg" 
+         height="100"
+          width="100" 
+          rotation="-90 0 0" 
+          scale="100 100 100" 
+          position="0 -3 0"
+          repeat="300 300"
+          ></a-plane>
+           <!-- swimming pool -->
+              <a-water
+        opacity="40"
+        side="double"
+        width="10"
+        height="10"
+        base-color="lightblue"
+        foam-color="blue"
+        repeat="2"
+        voronoi-points="10"
+        rotation="90 0 0"
+        position="-5 -1.8 -10"
+        
+      >
+      </a-water>
+        </a-box>
+            <a-box 
+             src="./Models/OIP (11).jpg" 
+         repeat="10 10"
+            height="0.06";
+            width="11";
+            depth="11"
+            position="-5 -2 -10"
+            
+            >
+
+            </a-box>
+
+           
+            
+
+           
+
+    </a-scene>
+            <script>
+      document.querySelector("a-water").setAttribute("animation", {
+        property: "scale",
+        // from: "10 2 1",
+        // to: "2 15 2",
+        dur: 500,
+        loop: true,
+        dir: "alternate",
+        easing: "easeOutElastic",
+      });
+    </script>
+</body>
+</html>
